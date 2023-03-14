@@ -1,12 +1,43 @@
-<!DOCTYPE html>
-<html>
-    <head>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Seguros</title>
+        </head>
+        <body>
+            <form name="form_registro" onsubmit="registrarse(); return false;">
+                <div>
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" id="nombre_id">
+                </div>
+                <div id="error_nombre"></div>
+                <div>
+                    <label>Apellido</label>
+                    <input type="text" name="apellido" id="apellido_id">
+                </div>
+                <div>
+                    <label>DNI</label>
+                    <input type="number" name="dni" id="dni_id">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name="email" id="email_id">
+                </div>
+                <div>
+                    <label>Telefono</label>
+                    <input type="number" name="telefono" id="telefono_id">
+                </div>
+                <div>
+                    <label>Tipo de Seguro</label>
+                    <select name="seguro" id="seguro_id" onchange="tipoSeguro()">
+                        <option value="Basico">Basico</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                    <div id="valor_tipo_seguro"></div>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+        </body>
+        <script src="./script.js"></script>
+    </html>
 
-    </head>
-
-    <body>
-
-    </body>
-
-    <script  src="./script.js"></script>
-</html>
