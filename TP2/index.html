@@ -4,12 +4,6 @@
             <title>Calculadora</title>
         </head>
         <body>
-            <form name="form_registro" onsubmit="calcular(); return false;">
-                <div>
-                    <label>Nombre</label>
-                    <input type="text" name="nombre" id="nombre_id">
-                </div>
-                <div id="error_nombre"></div>
                 <div>
                     <label>Valor 1</label>
                     <input type="number" name="valor1" id="valor1_id">
@@ -20,11 +14,13 @@
                 </div>
                 <br>
                 <br>
-                <button type="submit">Suma</button>
-                <button type="submit">Resta</button>
-                <button type="submit">Multiplicación</button>
-                <button type="submit">División</button>
-            </form>
+                <button  onclick="calcular('suma')">Suma</button>
+                <button  onclick="calcular('resta')">Resta</button>
+                <button  onclick="calcular('multiplicacion')">Multiplicacion</button>
+                <button  onclick="calcular('division')">Division</button>
+
+                <div id="resultado"></div>
+
         </body>
         <script src="./script.js"></script>
     </html>

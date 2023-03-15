@@ -1,32 +1,22 @@
-function registrarse(){
-    var nombre = document.form_registro.nombre.value
-    var apellido = document.form_registro.apellido.value
-    var email = document.getElementById("email_id").value
-    var dni = document.getElementById("dni_id").value
-    var telefono = document.getElementById("telefono_id").value
+const calcular = tipo => {
 
+    console.log('#################')
 
-    console.log(nombre,apellido,email,dni,telefono)
-    if(nombre==""){
-        document.getElementById("error_nombre").innerHTML = "EL campo es obligatorio"
-    }else{
-        document.getElementById("error_nombre").innerHTML = ""
+    const valor1 = document.getElementById("valor1_id").value;
+    const valor2 = document.getElementById("valor2_id").value;
+    let resultado=0;
+
+    if(tipo=="suma"){
+        resultado= valor2 + valor1;
+    }else if(tipo=="resta"){
+        resultado = valor1-valor2;
+    }else if(tipo=="multiplicacion") {
+        resultado = valor1 * valor2;
+    }else {
+        resultado = valor1 / valor2;
     }
-}
-function tipoSeguro(){
-    
-    var seguro = document.getElementById("seguro_id").value
-    console.log("tipoSeguro",seguro)
+    document.getElementById("resultado").innerHTML = `resultado:  ${resultado}`; 
+    console.log("valores: ",valor1,"-",valor2);
 
-    if(seguro=="Basico"){
-        seguro = seguro +  " $500";
-    }else if(seguro=="Intermedio"){
-        seguro = seguro +  " $1000";
-    }else{
-        seguro = seguro +  " $1500";
-    }
-    document.getElementById("valor_tipo_seguro").innerHTML = seguro 
 
 }
-
-tipoSeguro()
